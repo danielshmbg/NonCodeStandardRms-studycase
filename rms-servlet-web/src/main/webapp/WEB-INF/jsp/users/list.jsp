@@ -30,7 +30,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="\logout">Log out</a>
+        <a class="mdl-navigation__link" href="../logout">Log out</a>
       </nav>
     </div>
   </header>
