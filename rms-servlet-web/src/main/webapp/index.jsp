@@ -33,7 +33,8 @@
 					<a class="mdl-navigation__link" href="login">Login</a>
 					<% } 
 				else { %>
-					<a class="mdl-navigation__link" href="users/list">Users</a>
+					<% if (username != null) {%> welcome, <% out.print( username);} %>
+					<!-- <a class="mdl-navigation__link" href="users/list">Users</a> -->
 					<a class="mdl-navigation__link" href="logout">Logout</a>
 					<% }%>
 
@@ -43,10 +44,13 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">RMS</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="users/list">Users</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <% if (username == null) { %>
+					<a class="mdl-navigation__link" href="login">Login</a>
+					<% } 
+				else { %>
+					<a class="mdl-navigation__link" href="users/list">Users</a>
+					<a class="mdl-navigation__link" href="logout">Logout</a>
+					<% }%>
         </nav>
       </div>
       <main class="mdl-layout__content">
